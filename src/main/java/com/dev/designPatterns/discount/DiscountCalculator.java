@@ -7,10 +7,10 @@ import java.math.BigDecimal;
 public class DiscountCalculator {
 
     public BigDecimal calculate(Budget budget){
-        Discount discount = new DiscountForMoreThanFiveItems(
+        Discount discountChain = new DiscountForMoreThanFiveItems(
           new DiscountForMoreThanFiveHundred(
                   new WithoutDiscount()));
 
-        return discount.calculate(budget);
+        return discountChain.calculate(budget);
     }
 }

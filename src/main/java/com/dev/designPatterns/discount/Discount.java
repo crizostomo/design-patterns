@@ -12,6 +12,15 @@ public abstract class Discount { //The idea is to instantiate the "daughter's cl
         this.next = next;
     }
 
-    public abstract BigDecimal calculate(Budget budget);
+    public BigDecimal calculate(Budget budget){
+        if (shouldApply(budget)){
+            return doCalculation(budget);
+        }
+        return next.calculate(budget);
+    }
+
+    //protected below to avoid this to be called when stm calls 'Discount'
+    protected abstract BigDecimal doCalculation(Budget budget);
+    protected abstract boolean shouldApply(Budget budget);
 
 }

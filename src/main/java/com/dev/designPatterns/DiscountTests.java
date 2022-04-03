@@ -28,4 +28,7 @@ public class DiscountTests {
  * if each point needs to apply something. In order to avoid duplication we used
  * inheritance in "mother class" called 'Discount' and abstract method called
  * 'calculate' to ensure that each class own this method called 'calculate'
+ *
+ * TEMPLATE METHOD PATTERN: This pattern reuses common parts in code avoiding
+ * duplicated parts
  */
