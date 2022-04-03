@@ -31,4 +31,7 @@ public class DiscountTests {
  *
  * TEMPLATE METHOD PATTERN: This pattern reuses common parts in code avoiding
  * duplicated parts
+ *
+ * STATE PATTERN: Similar to the 'STRATEGY PATTERN' but it is based on states and
+ * their transitions
  */
