@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 public class TaxesCalculator {
 
-    public BigDecimal calculate(Budget budget){
-        return budget.getValue().multiply(new BigDecimal("0.1"));
+    public BigDecimal calculate(Budget budget, Tax tax) {
+        return tax.calculate(budget);
+        }
     }
-}
