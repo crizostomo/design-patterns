@@ -37,4 +37,8 @@ public class DiscountTests {
  *
  * COMMAND PATTERN: is a behavioral design pattern that turns a request into a
  * stand-alone object that contains all information about the request.
+ *
+ * OBSERVER PATTERN: We have classes observers/listeners, and we have a main class
+ * that is executing this event and as soon as this happens the listeners will
+ * be notified.
  */
