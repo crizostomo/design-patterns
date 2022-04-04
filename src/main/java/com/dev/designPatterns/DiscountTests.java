@@ -34,4 +34,7 @@ public class DiscountTests {
  *
  * STATE PATTERN: Similar to the 'STRATEGY PATTERN' but it is based on states and
  * their transitions
+ *
+ * COMMAND PATTERN: is a behavioral design pattern that turns a request into a
+ * stand-alone object that contains all information about the request.
  */
