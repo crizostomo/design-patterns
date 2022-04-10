@@ -1,8 +1,6 @@
 package com.dev.designPatterns.status;
 
-import com.dev.designPatterns.store.Budget;
-
-import java.math.BigDecimal;
+import com.dev.designPatterns.budget.Budget;
 
 public class Denied extends BudgetStatus {
 

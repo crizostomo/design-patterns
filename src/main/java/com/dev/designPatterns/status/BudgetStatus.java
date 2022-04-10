@@ -1,7 +1,7 @@
 package com.dev.designPatterns.status;
 
 import com.dev.designPatterns.DomainException;
-import com.dev.designPatterns.store.Budget;
+import com.dev.designPatterns.budget.Budget;
 
 import java.math.BigDecimal;
 

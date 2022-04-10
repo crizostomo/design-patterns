@@ -1,4 +1,4 @@
-package com.dev.designPatterns.store;
+package com.dev.designPatterns.budget;
 
 import com.dev.designPatterns.DomainException;
 import com.dev.designPatterns.http.HttpAdapter;

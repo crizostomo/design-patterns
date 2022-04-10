@@ -1,6 +1,6 @@
 package com.dev.designPatterns.discount;
 
-import com.dev.designPatterns.store.Budget;
+import com.dev.designPatterns.budget.Budget;
 
 import java.math.BigDecimal;
 

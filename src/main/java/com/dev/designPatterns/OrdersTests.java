@@ -8,7 +8,7 @@ import com.dev.designPatterns.order.action.SendEmailOrder;
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-public class OrdersTest {
+public class OrdersTests {
     public static void main(String[] args) {
         String client = "Rodrigo";
         BigDecimal budgetValue = new BigDecimal("300");

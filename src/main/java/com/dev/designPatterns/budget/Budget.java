@@ -1,20 +1,22 @@
-package com.dev.designPatterns.store;
+package com.dev.designPatterns.budget;
 
 import com.dev.designPatterns.status.BudgetStatus;
 import com.dev.designPatterns.status.Finished;
 import com.dev.designPatterns.status.InAnalysis;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Budget {
+public class Budget implements Budgetable {
 
     private BigDecimal value;
-    private int itemsQuantity;
     private BudgetStatus status;
+    private List<Budgetable> items;
 
-    public Budget(BigDecimal value, int itemsQuantity) {
-        this.value = value;
-        this.itemsQuantity = itemsQuantity;
+    public Budget() {
+        this.value = BigDecimal.ZERO;
+        this.items = new ArrayList<>();
         this.status = new InAnalysis();
     }
 
@@ -40,7 +42,7 @@ public class Budget {
     }
 
     public int getItemsQuantity() {
-        return itemsQuantity;
+        return items.size();
     }
 
     public BudgetStatus getStatus() {
@@ -53,5 +55,10 @@ public class Budget {
 
     public boolean isFinished() {
         return status instanceof Finished;
+    }
+
+    public void addItem(Budgetable item) {
+        this.value = value.add(item.getValue());
+        this.items.add(item);
     }
 }

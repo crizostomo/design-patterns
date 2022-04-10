@@ -1,6 +1,7 @@
 package com.dev.designPatterns;
 
-import com.dev.designPatterns.store.Budget;
+import com.dev.designPatterns.budget.Budget;
+import com.dev.designPatterns.budget.BudgetItem;
 import com.dev.designPatterns.tax.ICMS;
 import com.dev.designPatterns.tax.ISS;
 import com.dev.designPatterns.tax.TaxesCalculator;
@@ -9,14 +10,10 @@ import java.math.BigDecimal;
 
 public class TaxesTests {
     public static void main(String[] args) {
-        Budget budget = new Budget(new BigDecimal("100"), 1);
+        Budget budget = new Budget();
+        budget.addItem(new BudgetItem(new BigDecimal("200")));
+
         TaxesCalculator calculator = new TaxesCalculator();
         System.out.println(calculator.calculate(budget, new ISS(new ICMS(null))));
     }
 }
-
-/**
- * DECORATOR PATTERN: Each class has their own implementation, we can use
- * polymorphism with interface, or an abstract class. When we do this we eliminate
- * if and else used excessively
- */
