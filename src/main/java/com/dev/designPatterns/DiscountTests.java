@@ -18,27 +18,3 @@ public class DiscountTests {
 
     }
 }
-
-/**
- * STRATEGY PATTERN: Each class has their own implementation, we can use
- * polymorphism with interface, or an abstract class. When we do this we eliminate
- * if and else used excessively
- *
- * CHAIN OF RESPONSIBILITY PATTERN: A sequence of responsibilities that verifies
- * if each point needs to apply something. In order to avoid duplication we used
- * inheritance in "mother class" called 'Discount' and abstract method called
- * 'calculate' to ensure that each class own this method called 'calculate'
- *
- * TEMPLATE METHOD PATTERN: This pattern reuses common parts in code avoiding
- * duplicated parts
- *
- * STATE PATTERN: Similar to the 'STRATEGY PATTERN' but it is based on states and
- * their transitions
- *
- * COMMAND PATTERN: is a behavioral design pattern that turns a request into a
- * stand-alone object that contains all information about the request.
- *
- * OBSERVER PATTERN: We have classes observers/listeners, and we have a main class
- * that is executing this event and as soon as this happens the listeners will
- * be notified.
- */

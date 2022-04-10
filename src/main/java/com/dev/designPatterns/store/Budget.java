@@ -1,6 +1,7 @@
 package com.dev.designPatterns.store;
 
 import com.dev.designPatterns.status.BudgetStatus;
+import com.dev.designPatterns.status.Finished;
 import com.dev.designPatterns.status.InAnalysis;
 
 import java.math.BigDecimal;
@@ -48,5 +49,9 @@ public class Budget {
 
     public void setStatus(BudgetStatus status) {
         this.status = status;
+    }
+
+    public boolean isFinished() {
+        return status instanceof Finished;
     }
 }
