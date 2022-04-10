@@ -2,6 +2,7 @@ package com.dev.designPatterns;
 
 import com.dev.designPatterns.order.GenerateOrder;
 import com.dev.designPatterns.order.GenerateOrderHandler;
+import com.dev.designPatterns.order.action.OrderLog;
 import com.dev.designPatterns.order.action.SaveOrderDataBase;
 import com.dev.designPatterns.order.action.SendEmailOrder;
 
@@ -17,7 +18,8 @@ public class OrdersTests {
         GenerateOrder generator = new GenerateOrder(client, budgetValue, itemsQuantity);
         GenerateOrderHandler handler = new GenerateOrderHandler(
                 Arrays.asList(new SaveOrderDataBase(),
-                new SendEmailOrder()
+                new SendEmailOrder(),
+                new OrderLog()
         ));
         handler.execute(generator);
     }

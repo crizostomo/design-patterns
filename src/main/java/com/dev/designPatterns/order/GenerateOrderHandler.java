@@ -21,7 +21,7 @@ public class GenerateOrderHandler {
         budget.addItem(new BudgetItem(new BigDecimal("200")));
         Order order = new Order(data.getClient(), LocalDateTime.now(), budget);
 
-        actionAfterOrders.forEach(a -> a.executeAction(order));
+        this.actionAfterOrders.forEach(a -> a.executeAction(order));
 
     }
 }
